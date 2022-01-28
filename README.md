@@ -91,3 +91,4 @@ Run
 ## Credit
 
 - [programming-quotes-api](https://github.com/skolakoda/programming-quotes-api)
+- [Background image by Oskar Yildiz from Unsplash](https://unsplash.com/photos/gy08FXeM2L4)
