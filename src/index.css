@@ -1,0 +1,141 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-bg: hsl(10, 10%, 50%);
+  --clr-grad-1: hsla(10, 10%, 50%, 0.3);
+  --clr-grad-2: hsla(10, 10%, 50%, 0.6);
+  --clr-black-10: hsla(0, 0%, 0%, 0.1);
+  --clr-black-70: hsla(0, 0%, 0%, 0.7);
+  --clr-text-primary: hsl(0, 0%, 90%);
+  --clr-text-secondary: hsl(0, 0%, 80%);
+  --clr-btn-bg: hsl(0, 0%, 80%);
+  --clr-btn-text: hsl(0, 0%, 20%);
+  --clr-white: hsl(0, 0%, 95%);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--clr-bg);
+  background: linear-gradient(to top, var(--clr-grad-1), var(--clr-grad-2)),
+    url("./images/oskar-yildiz-gy08FXeM2L4-unsplash.jpg") center / cover
+      no-repeat;
+}
+
+.container {
+  width: 60%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  padding: 1.375em;
+  background: var(--clr-black-70);
+  border: 0.125em solid var(--clr-black-10);
+  border-radius: 1.25em;
+}
+
+@supports (backdrop-filter: blur(0.625em)) or
+  (-webkit-backdrop-filter: blur(0.625em)) {
+  .card {
+    background-color: var(--clr-black-10);
+    backdrop-filter: blur(2em);
+    -webkit-backdrop-filter: blur(2em);
+  }
+}
+
+.card h1 {
+  margin-bottom: 0.5em;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: var(--clr-text-primary);
+  text-align: center;
+}
+
+.card p {
+  margin: 1em 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--clr-text-secondary);
+  text-align: end;
+}
+
+.card button {
+  margin: 0 auto;
+  padding: 0.8em 1.5em;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: var(--clr-btn-bg);
+  color: var(--clr-btn-text);
+  text-transform: uppercase;
+  outline: transparent;
+  border: transparent;
+  border-radius: 2em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card button:hover {
+  background: var(--clr-white);
+}
+
+.card button:focus {
+  outline: 0.125em dashed var(--clr-white);
+  outline-offset: 0.125em;
+}
+
+@media screen and (max-width: 60em) {
+  .container {
+    width: 80%;
+  }
+
+  .card {
+    padding: 1em;
+  }
+
+  .card h1 {
+    font-size: 1.8rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  .card button {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 35em) {
+  .container {
+    width: 100%;
+  }
+
+  .card h1 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+
+  .card button {
+    font-size: 0.7rem;
+  }
+}
